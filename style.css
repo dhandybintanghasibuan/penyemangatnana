@@ -1,0 +1,114 @@
+/* Mengambil font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fce38a, #f38181);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Animasi untuk memunculkan container */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    /* Menerapkan animasi di sini */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover;
+    border: 5px solid #fce38a;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #f38181;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.quote-box {
+    background-color: #f9f9f9;
+    border-left: 5px solid #fce38a;
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#quote-text {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1rem;
+    min-height: 50px; /* Memberi ruang agar layout tidak berantakan */
+}
+
+button {
+    background-color: #f38181;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #e26a6a;
+    transform: translateY(-3px); /* Memberi efek terangkat saat disentuh */
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Memberi jarak antar tombol */
+    margin-top: 20px; /* Memberi sedikit jarak dari kotak kutipan */
+}
+
+/* Menghilangkan garis bawah pada link yang membungkus tombol */
+.button-group a {
+    text-decoration: none;
+}
+
+/* Mengganti desain tombol utama agar lebarnya tidak 100% */
+#new-quote-btn {
+    width: auto; /* Lebar otomatis sesuai konten */
+}
+
+/* Gaya khusus untuk tombol WhatsApp */
+#wa-btn {
+    background-color: #25D366; /* Warna hijau WhatsApp */
+    width: auto;
+}
+
+#wa-btn:hover {
+    background-color: #1EBE57; /* Warna hijau sedikit lebih gelap saat disentuh */
+}
